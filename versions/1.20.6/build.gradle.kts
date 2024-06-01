@@ -1,10 +1,13 @@
+import io.papermc.sculptor.shared.util.MinecraftJarType
+
 plugins {
-    id("io.papermc.sculptor.version") version "1.0.7"
+    id("io.papermc.sculptor.version") version "1.0.8-SNAPSHOT"
 }
 
 val generateReportsProperty = providers.gradleProperty("generateReports")
 mache {
     minecraftVersion = "1.20.6"
+    minecraftJarType = MinecraftJarType.CLIENT
 
     repositories.register("sonatype snapshots") {
         url = "https://s01.oss.sonatype.org/content/repositories/snapshots/"

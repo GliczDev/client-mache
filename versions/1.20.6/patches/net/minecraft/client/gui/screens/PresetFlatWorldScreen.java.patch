@@ -1,0 +1,19 @@
+--- a/net/minecraft/client/gui/screens/PresetFlatWorldScreen.java
++++ b/net/minecraft/client/gui/screens/PresetFlatWorldScreen.java
+@@ -23,6 +_,7 @@
+ import net.minecraft.core.registries.Registries;
+ import net.minecraft.network.chat.CommonComponents;
+ import net.minecraft.network.chat.Component;
++import net.minecraft.network.chat.MutableComponent;
+ import net.minecraft.resources.ResourceKey;
+ import net.minecraft.resources.ResourceLocation;
+ import net.minecraft.tags.FlatLevelGeneratorPresetTags;
+@@ -50,7 +_,7 @@
+     private static final int SLOT_FG_X = 2;
+     private static final int SLOT_FG_Y = 2;
+     private static final ResourceKey<Biome> DEFAULT_BIOME = Biomes.PLAINS;
+-    public static final Component UNKNOWN_PRESET = Component.translatable("flat_world_preset.unknown");
++    public static final MutableComponent UNKNOWN_PRESET = Component.translatable("flat_world_preset.unknown");
+     private final CreateFlatWorldScreen parent;
+     private Component shareText;
+     private Component listText;

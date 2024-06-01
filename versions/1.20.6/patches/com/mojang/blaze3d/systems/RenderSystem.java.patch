@@ -1,0 +1,20 @@
+--- a/com/mojang/blaze3d/systems/RenderSystem.java
++++ b/com/mojang/blaze3d/systems/RenderSystem.java
+@@ -832,7 +_,7 @@
+         Matrix4f matrix4f = new Matrix4f(projectionMatrix);
+         if (!isOnRenderThread()) {
+             recordRenderCall(() -> {
+-                projectionMatrix = matrix4f;
++                RenderSystem.projectionMatrix = matrix4f;
+                 RenderSystem.vertexSorting = vertexSorting;
+             });
+         } else {
+@@ -844,7 +_,7 @@
+     public static void setTextureMatrix(Matrix4f textureMatrix) {
+         Matrix4f matrix4f = new Matrix4f(textureMatrix);
+         if (!isOnRenderThread()) {
+-            recordRenderCall(() -> textureMatrix = matrix4f);
++            recordRenderCall(() -> RenderSystem.textureMatrix = matrix4f);
+         } else {
+             RenderSystem.textureMatrix = matrix4f;
+         }
