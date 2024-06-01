@@ -1,0 +1,19 @@
+--- a/net/minecraft/client/gui/screens/worldselection/WorldCreationUiState.java
++++ b/net/minecraft/client/gui/screens/worldselection/WorldCreationUiState.java
+@@ -13,6 +_,7 @@
+ import net.minecraft.core.Registry;
+ import net.minecraft.core.registries.Registries;
+ import net.minecraft.network.chat.Component;
++import net.minecraft.network.chat.MutableComponent;
+ import net.minecraft.resources.ResourceKey;
+ import net.minecraft.tags.TagKey;
+ import net.minecraft.tags.WorldPresetTags;
+@@ -288,7 +_,7 @@
+     }
+ 
+     public static record WorldTypeEntry(@Nullable Holder<WorldPreset> preset) {
+-        private static final Component CUSTOM_WORLD_DESCRIPTION = Component.translatable("generator.custom");
++        private static final MutableComponent CUSTOM_WORLD_DESCRIPTION = Component.translatable("generator.custom");
+ 
+         public Component describePreset() {
+             return Optional.ofNullable(this.preset)

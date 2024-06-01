@@ -1,6 +1,6 @@
 --- a/net/minecraft/server/MinecraftServer.java
 +++ b/net/minecraft/server/MinecraftServer.java
-@@ -857,7 +_,7 @@
+@@ -858,7 +_,7 @@
      }
  
      @Override
