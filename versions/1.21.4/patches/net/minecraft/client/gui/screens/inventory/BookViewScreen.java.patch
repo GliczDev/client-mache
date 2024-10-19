@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/gui/screens/inventory/BookViewScreen.java
++++ b/net/minecraft/client/gui/screens/inventory/BookViewScreen.java
+@@ -258,7 +_,7 @@
+             } else {
+                 WritableBookContent writableBookContent = stack.get(DataComponents.WRITABLE_BOOK_CONTENT);
+                 return writableBookContent != null
+-                    ? new BookViewScreen.BookAccess(writableBookContent.getPages(isTextFilteringEnabled).map(Component::literal).toList())
++                    ? new BookViewScreen.BookAccess(writableBookContent.getPages(isTextFilteringEnabled).<Component>map(Component::literal).toList())
+                     : null;
+             }
+         }

@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/gui/screens/PresetFlatWorldScreen.java
++++ b/net/minecraft/client/gui/screens/PresetFlatWorldScreen.java
+@@ -298,7 +_,7 @@
+             public Entry(final Holder<FlatLevelGeneratorPreset> presetHolder) {
+                 this.preset = presetHolder.value();
+                 this.name = presetHolder.unwrapKey()
+-                    .map(resourceKey -> Component.translatable(resourceKey.location().toLanguageKey("flat_world_preset")))
++                    .<Component>map(resourceKey -> Component.translatable(resourceKey.location().toLanguageKey("flat_world_preset")))
+                     .orElse(PresetFlatWorldScreen.UNKNOWN_PRESET);
+             }
+ 

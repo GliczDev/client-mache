@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/gui/spectator/categories/TeleportToPlayerMenuCategory.java
++++ b/net/minecraft/client/gui/spectator/categories/TeleportToPlayerMenuCategory.java
+@@ -31,7 +_,7 @@
+         this.items = players.stream()
+             .filter(playerInfo -> playerInfo.getGameMode() != GameType.SPECTATOR)
+             .sorted(PROFILE_ORDER)
+-            .map(playerInfo -> new PlayerMenuItem(playerInfo.getProfile()))
++            .<SpectatorMenuItem>map(playerInfo -> new PlayerMenuItem(playerInfo.getProfile()))
+             .toList();
+     }
+ 

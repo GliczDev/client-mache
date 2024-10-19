@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/renderer/LevelEventHandler.java
++++ b/net/minecraft/client/renderer/LevelEventHandler.java
+@@ -567,7 +_,7 @@
+                 int i3 = data >> 6;
+                 if (i3 > 0) {
+                     if (randomSource.nextFloat() < 0.3F + i3 * 0.1F) {
+-                        float f2 = 0.15F + 0.02F * i3 * i3 * randomSource.nextFloat();
++                        f2 = 0.15F + 0.02F * i3 * i3 * randomSource.nextFloat();
+                         float f4 = 0.4F + 0.3F * i3 * randomSource.nextFloat();
+                         this.level.playLocalSound(pos, SoundEvents.SCULK_BLOCK_CHARGE, SoundSource.BLOCKS, f2, f4, false);
+                     }
