@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/renderer/item/ConditionalItemModel.java
++++ b/net/minecraft/client/renderer/item/ConditionalItemModel.java
+@@ -73,7 +_,7 @@
+         }
+ 
+         private static <T extends ConditionalItemModelProperty> T swapContext(T property, RegistryContextSwapper contextSwapper, ClientLevel level) {
+-            return (T)contextSwapper.swapTo(property.type().codec(), property, level.registryAccess()).result().orElse(property);
++            return (T)contextSwapper.swapTo((com.mojang.serialization.Codec<T>) property.type().codec(), property, level.registryAccess()).result().orElse(property);
+         }
+ 
+         @Override

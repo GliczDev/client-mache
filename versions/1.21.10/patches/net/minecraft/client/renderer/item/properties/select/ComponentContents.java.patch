@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/renderer/item/properties/select/ComponentContents.java
++++ b/net/minecraft/client/renderer/item/properties/select/ComponentContents.java
+@@ -24,7 +_,7 @@
+                     ? DataResult.error(() -> "Component can't be serialized")
+                     : DataResult.success(dataComponentType)
+             );
+-        MapCodec<SelectItemModel.UnbakedSwitch<ComponentContents<T>, T>> mapCodec = codec.dispatchMap(
++        MapCodec<SelectItemModel.UnbakedSwitch<ComponentContents<T>, T>> mapCodec = ((Codec<DataComponentType<T>>)codec).dispatchMap(
+             "component",
+             unbakedSwitch -> unbakedSwitch.property().componentType,
+             dataComponentType -> SelectItemModelProperty.Type.createCasesFieldCodec(dataComponentType.codecOrThrow())
